@@ -1,29 +1,29 @@
-# 4
+#Задача 4
 print(int(-5.7))
 print(int(-5.7))
 print(int(float(3 ** 39)))
 
-# 5
+#Задача 5
 print('Hi,', input('Введите имя: '))
 
-# 6
+#Задача 6
 print((int(input('Введите X: ')) * 60
        + int(input('Введите Y: '))) * 2)
 
-# 7
+#Задача 7
 print((not False or True) and False)
-# 8
+#Задача 8
 dr = int(input('Введите год рождения: '))
 if (dr < 1900 or dr > 3000):
     print("Год не входит в выборку")
 else:
     print('С днём рождения!' if dr % 4 == 0 and dr % 100 != 0 or dr % 400 == 0 else 'Год обычный')
-# 9
+#Задача 9
 i = 0;
 while (i < 20):
     i += 2
     print(i)
-# 10
+#Задача 10
 a = int(input())
 sum = a
 while (a != 0):
@@ -32,7 +32,7 @@ while (a != 0):
 else:
     print(sum)
 
-# 11
+#Задача 11
 x = int(input())
 y = int(input())
 if x > y:
@@ -50,23 +50,12 @@ if (kus % 2 == 0):
 else:
     print(kus * 2)
 
-# 2ое решение
-import math
-
-x = int(input())
-y = int(input())
-kus = math.lcm(x, y)
-if (kus % 2 == 0):
-    print(kus)
-else:
-    print(kus * 2)
-
-# 12
+#Задача 12
 for i in range(0, 21):
     if i % 2 == 0:
         print(i, end=" ")
 
-# 13
+#Задача 13
 a = int(input("A: "))
 b = int(input("B: "))
 c = int(input("C: "))
@@ -81,7 +70,7 @@ for i in range(a, b + 1):
         print(i * j, end="\t")
     print()
 
-# 14
+#Задача 14
 n = int(input("N: "))
 a = [[0 for j in range(n)] for i in range(n)]
 x, y = 0
@@ -111,7 +100,7 @@ for i in range(n):
         print(a[i][j], end='\t')
     print()
 
-# 15
+#Задача 15
 import time
 from tkinter import messagebox
 
