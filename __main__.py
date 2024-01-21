@@ -71,33 +71,37 @@ for i in range(a, b + 1):
     print()
 
 #Задача 14
-n = int(input("N: "))
-a = [[0 for j in range(n)] for i in range(n)]
-x, y = 0
-dx, dy = 0, 1
-a[0][0] = 1
-count = 2
-while count <= n * n:
-    if (x + dx >= 0 and x + dx <= n - 1 and y + dy <= n - 1 and y + dy >= 0 and a[x + dx][y + dy] == 0):
-        a[x + dx][y + dy] = count
-        count += 1
-        x += dx
-        y += dy
-    elif (dy == 1):
-        dx = 1
-        dy = 0
-    elif (dx == 1):
-        dx = 0
-        dy = -1
-    elif (dy == -1):
-        dx = -1;
-        dy = 0;
-    elif (dx == -1):
-        dx = 0
-        dy = 1
-for i in range(n):
-    for j in range(n):
-        print(a[i][j], end='\t')
+n = int(input('Введите размер матрицы: '))
+matrix = [[0] * n for _ in range(n)]
+num = 1
+left, right, top, bottom = 0, n - 1, 0, n - 1
+
+while left <= right and top <= bottom:
+    for i in range(left, right + 1):
+        matrix[top][i] = num
+        num += 1
+    top += 1
+
+    for i in range(top, bottom + 1):
+        matrix[i][right] = num
+        num += 1
+    right -= 1
+
+    if top <= bottom:
+        for i in range(right, left - 1, -1):
+            matrix[bottom][i] = num
+            num += 1
+        bottom -= 1
+
+    if left <= right:
+        for i in range(bottom, top - 1, -1):
+            matrix[i][left] = num
+            num += 1
+        left += 1
+
+for row in matrix:
+    for num in row:
+        print(num, end='\t')
     print()
 
 #Задача 15
